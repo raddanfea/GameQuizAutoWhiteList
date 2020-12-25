@@ -8,4 +8,6 @@ It reads the CSV file from a link, determines who succeeded and if the list chan
 
 * Can be modified for other games and to add  more conditions easily.
 * If you have trouble running this under linux, use dos2unix.
+* Local Whitelist memory to avoid unnecessary FTP traffic.
+* Hourly check by default.
 * MIT License

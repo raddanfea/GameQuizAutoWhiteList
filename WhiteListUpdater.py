@@ -17,6 +17,7 @@ FTP_FILE_NAME = 'WhiteList.txt'
 LOCAL_WHITELIST_FILE_NAME = 'WhiteList.txt'
 CSV_URL = ''
 
+HOURS = 1
 TRIES = 5  # Maximum tries.
 SCORE = '21 / 21'  # String eval to avoid any string conversion. Format:  'x / x'
 BASESTRING = ''  # Hardcoded values for output. For lazy admins/backup.
@@ -142,7 +143,7 @@ def error_logger(err_details: str):
 def my_scheduler():
     job()
     scheduler = BlockingScheduler()
-    scheduler.add_job(job, 'interval', hours=1)
+    scheduler.add_job(job, 'interval', hours=HOURS)
     scheduler.start()
 
 
